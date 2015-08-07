@@ -184,4 +184,5 @@ function startBrowserSync() {
     gulp.watch([config.less], ['styles']);
     gulp.watch([config.staticFiles + 'js/*.js'], ['inject-watch']);
     gulp.watch([config.templates + '**/*.html']).on("change", browserSync.reload);
+    gulp.watch([config.client + '*/*.py']).on("change", browserSync.reload);
 };
